@@ -136,7 +136,13 @@ router.put('/:id', (req, res) => {
       }
       
     })
-    .then((updatedProductTags) => res.json(updatedProductTags))
+    .then(dbProductData => {
+      if (!dbProductData[0]) {
+        res.status(404).json({ message: "No product found with this id" });
+        return;
+      }
+      res.json(dbProductData);
+    })
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
