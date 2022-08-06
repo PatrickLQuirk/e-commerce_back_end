@@ -3,6 +3,8 @@
 ## Description
 This application provides the back end for an e-commerce site. The application uses a MySQL database to store information about the products that an e-commerce site has. There are tables for the different categories of products, the products themselves, and the tags that each product has. An Express.js API is used to connect to the database, and Sequelize is used for interacting with the database. The user can use routes to get all or one category, create, update, and delete categories, and likewise for tags and products.
 
+![Website](eCommerce-back-end.png)
+
 ## Table of Contents
 
 - [Installation](#installation)
